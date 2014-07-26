@@ -15,8 +15,8 @@ class CreateUsagesTable extends Migration {
 		Schema::create('usages', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('inquiries_id');
-			$table->integer('appliances_id');
+			$table->integer('inquiry_id');
+			$table->integer('appliance_id');
 			$table->string('range_usages', 30);						
 			$table->timestamps();
 		});
