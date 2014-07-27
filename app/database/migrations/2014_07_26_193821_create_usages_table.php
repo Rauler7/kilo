@@ -17,6 +17,7 @@ class CreateUsagesTable extends Migration {
 			$table->increments('id');
 			$table->integer('inquiry_id');
 			$table->integer('appliance_id');
+			$table->integer('prom_usages');
 			$table->string('range_usages', 30);						
 			$table->timestamps();
 		});

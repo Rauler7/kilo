@@ -15,8 +15,8 @@ class CreateAppliancesTable extends Migration {
 		Schema::create('appliances', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('nombre', 50);
-			$table->string('prom_usages', 30);			
+			$table->string('name', 50);
+			$table->string('standar_usages', 30);			
 			$table->timestamps();
 		});
 	}

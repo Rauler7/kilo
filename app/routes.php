@@ -11,5 +11,7 @@
 |
 */
 
-Route::get('/', 'RefererController@create');
-Route::controller('referer', 'RefererController', array('only' => array('create', 'store')));
+Route::get('/', 'InquiryController@create');
+Route::controller('inquity', 'InquiryController', array('only' => array('create', 'store')));
+Route::controller('usage', 'UsageController', array('only' => array('create', 'store')));
+Route::controller('complaint', 'ComplaintController', array('only' => array('create', 'store')));
