@@ -44,7 +44,9 @@ class ComplaintController extends \BaseController {
 		$response = array('success' => false, 'errors' => false);
 
 		if ($validator->fails()) {
-			$response['errors'] = $validator->getMessageBag()->toArray();
+			return Redirect::route('root')
+				->withErrors($validator)
+				->withInput(Input::all());
 		}
 		else {
 			Complaint::create($input);

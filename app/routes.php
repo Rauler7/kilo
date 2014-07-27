@@ -12,6 +12,11 @@
 */
 
 Route::get('/', 'InquiryController@create');
-Route::controller('inquity', 'InquiryController', array('only' => array('create', 'store')));
+Route::get('usage', 'UsageController@create');
+
+
+// Route::get('usage', 'UsageController@create');
+// Route::get('tip', 'TipController@create');
+Route::controller('inquiry', 'InquiryController', array('only' => array('create', 'store')));
 Route::controller('usage', 'UsageController', array('only' => array('create', 'store')));
 Route::controller('complaint', 'ComplaintController', array('only' => array('create', 'store')));

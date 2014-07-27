@@ -18,7 +18,7 @@ class CreateUsagesTable extends Migration {
 			$table->integer('inquiry_id');
 			$table->integer('appliance_id');
 			$table->integer('prom_usages');
-			$table->string('range_usages', 30);						
+			$table->decimal('range_usages', 5,3);						
 			$table->timestamps();
 		});
 	}
@@ -32,5 +32,4 @@ class CreateUsagesTable extends Migration {
 	{
 		Schema::drop('usages');
 	}
-
 }

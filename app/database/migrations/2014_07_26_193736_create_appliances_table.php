@@ -16,7 +16,8 @@ class CreateAppliancesTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('name', 50);
-			$table->string('standar_usages', 30);			
+			$table->string('standar_usages', 30);
+			$table->string('avg_usages', 30);			
 			$table->timestamps();
 		});
 	}

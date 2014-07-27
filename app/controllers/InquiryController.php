@@ -20,7 +20,7 @@ class InquiryController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('inquiries.create');
+		return View::make('inquiry.create');
 	}
 
 
@@ -41,10 +41,12 @@ class InquiryController extends \BaseController {
 		$response = array('success' => false, 'errors' => false);
 
 		if ($validator->fails()) {
-			$response['errors'] = $validator->getMessageBag()->toArray();
+			return Redirect::route('root')
+				->withErrors($validator)
+				->withInput(Input::all());
 		}
 		else {
-			Inquiry::create($input);
+			Session::flash($input);				
 		}
 		return Response::json($response);
 	}
